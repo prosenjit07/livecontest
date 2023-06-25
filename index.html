@@ -98,7 +98,23 @@
         </div>
     </section>
 
-    
+    <div class="filter-button">
+        <ul>
+        <li class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Filter
+            </a>
+            <ul id="webList" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li onclick="time1(this.id)" id="11"><a class="dropdown-item"
+                        href="#">Max Duration</a>
+                </li>
+                <li onclick="time2(this.id)" id="12"><a class="dropdown-item" href="#">Min Duration</a>
+                </li>
+            </ul>
+    </div>
+
+
 
     <section class="container" id="cardBody"></section>
 

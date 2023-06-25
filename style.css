@@ -54,7 +54,13 @@
     color: rgb(0, 0, 0);    
 }
 
-
+.filter-button{
+    background-color: rgb(75, 137, 207);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 /* media quries */
 @media only screen and (max-width: 605px) {
     #cardBody {
