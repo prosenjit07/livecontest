@@ -5,32 +5,31 @@ let websiteAPI = ["codeforces", "codeforces_gym", "top_coder", "at_coder", "cs_a
 let webList = document.getElementById('webList');
 
 
-// Genrate Random Number to select category
+
 function randomCategory() {
     let num = Math.round(4 * Math.random());
     return num;
 }
-// Seconds to day
+
 function toDay(seconds) {
     let day = Math.round(seconds / 86400);
     return day;
 }
 
-//Return Formated Date
+
 function formatedDate(oldDate) {
     let newDate = oldDate.substring(0, 10);
     return newDate;
 }
 
-//Grab the name
-// select value of selected Category
+
 function sendCategory(index) {
     fetchAPI(websiteAPI[index]);
 }
-fetchAPI("all");
-//Parse Category to Function
 
-// Grab quotas text in json  
+fetchAPI("all");
+
+
 let json;
 fetch('Assets/json/codingQuota.json')
     .then(response => response.json())
@@ -39,19 +38,20 @@ fetch('Assets/json/codingQuota.json')
     })
     .catch(err => console.error(err));
 
-// fetch api for coding contest
+
 function fetchAPI(webName) {
     fetch(`https://kontests.net/api/v1/${webName}`)
         .then(response => response.json())
         .then(data => {
-
+            
             data.sort((a, b) => {
                 var start_date = new Date(a.start_time);
                 var end_date = new Date(b.start_time);
                 return end_date.getTime() - start_date.getTime();
             });
 
-            console.log(data); 
+            console.log(data);
+           
             let str = "";
             for (key in data) {
                 str += `<div class="card mb-3">
