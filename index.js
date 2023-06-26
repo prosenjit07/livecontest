@@ -32,7 +32,8 @@ function time1(seconds) {
 }
 
 function time2(seconds) {
-    min_duration("all");
+    fetchAPI("all");
+    // min_duration("all");
 }
 
 
