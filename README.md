@@ -1,6 +1,7 @@
 ## Real-Time-Coding-Contest
 This Live coding website will provide information about Realtime Live hackathons on different sites.
-![image](https://github.com/prosenjit07/livecontest/assets/98583038/7e5a70c9-061c-434e-870f-25834b806c81)
+![image](https://github.com/prosenjit07/livecontest/assets/98583038/3d82996c-e7c4-40af-ae08-4e42550d4816)
+
 
 
 
