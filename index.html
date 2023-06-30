@@ -12,18 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-
 <body>
     <nav id="navbar">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid nav">
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -66,20 +63,70 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="https://github.com/prosenjit07">Github</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="https://t.me/Advance_programming_Camp">Telegram</a>
-                        </li>
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tracker Sheet
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://docs.google.com/spreadsheets/d/1L1Aw1e_8LasAytEfDXC-KiJJlN4rx63iW3HhBgU-uCQ/edit#gid=84654839">CP
+                                        Tracker</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://docs.google.com/spreadsheets/d/1nj0OUFt9eJmCG6rrK73iQA3TtPwURehpOe0-_Q1IQKs/edit#gid=2127534273">DSA
+                                        Tracker</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://docs.google.com/spreadsheets/u/0/d/1yyCW_0ZeIsnEHawzsGV0JnzQn7L-bml2ueHt_eZHb64/pub?output=html">Geometry
+                                        Problem</a>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="https://clist.by/?timezone=+6:00">More Info</a>
-                        </li>
+                        <!-- Blog -->
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Blog
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://progkriya.org/gyan/basic-number-theory#">Progkriya</a></li>
+                                <li><a class="dropdown-item"
+                                        href="http://www.shafaetsplanet.com/planetcoding/">ShafaetAlgo Blog</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/site/smilitude/">Iqram
+                                        Mahmud Tutorial</a>
+                                </li>
+                                <li><a class="dropdown-item" href="https://recurringblunders.blogspot.com/">Owasi
+                                        Blog</a>
+                                </li>
+                                <li><a class="dropdown-item" href="https://itsfaiyaz.wordpress.com/">Faiyaz Blog</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://microsoft.github.io/AI-For-Beginners/">Microsoft AI</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Connect Me
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="https://github.com/prosenjit07">Github</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://t.me/Advance_programming_Camp">Telegram
+                                        </a></li>
+                            </ul>
+                        </div>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="https://clist.by/?timezone=+6:00">More
+                                    Info</a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -103,52 +150,52 @@
 
     <div class="filter-button">
         <ul>
-        <li class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Filter
-            </a>
-            <ul id="webList" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li onclick="time1(this.id)" id="11"><a class="dropdown-item"
-                        href="#">Max Duration</a>
-                </li>
-                <li onclick="time2(this.id)" id="12"><a class="dropdown-item" href="#">Min Duration</a>
-                </li>
-            </ul>
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Filter
+                </a>
+                <ul id="webList" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li onclick="time1(this.id)" id="11"><a class="dropdown-item" href="#">Max Duration</a>
+                    </li>
+                    <li onclick="time2(this.id)" id="12"><a class="dropdown-item" href="#">Min Duration</a>
+                    </li>
+                </ul>
     </div>
     <section class="container" id="cardBody"></section>
 
     <footer class="footer2">
-        <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
-        </div>
+        <!-- <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div> -->
         <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/jitroy2350">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/prosenjit_68">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/prosenjitbiswas07/">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/jitroy_7/">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/jitroy2350">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/prosenjit_68">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://www.linkedin.com/in/prosenjitbiswas07/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/jitroy_7/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
         </ul>
         <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-    
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
         </ul>
         <p>&copy;2023 <a href="https://prosenjit07.github.io/">Prosenjit</a> | All Rights Reserved</p>
-      </footer>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 <script src="index.js"></script>

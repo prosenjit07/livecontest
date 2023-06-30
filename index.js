@@ -53,6 +53,110 @@ function min_duration(webName) {
     fetch(`https://kontests.net/api/v1/${webName}`)
         .then(response => response.json())
         .then(data => {
+
+            data.sort((a, b) => {
+                var start_date = new Date(b.duration);
+                var end_date = new Date(a.duration);
+                return end_date.getTime() - start_date.getTime();
+            });
+
+            console.log(data);
+
+            let str = "";
+            for (key in data) {
+                str += `<div class="card mb-3">
+                        <img src="https://source.unsplash.com/1000x400/?${category[randomCategory()]},${category[randomCategory()]}" class="card-img-top"
+                            alt="Image">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">${data[key].name}</h5>
+                                <div>
+                                    <span class="badge text-bg-success">${data[key].site != undefined ? data[key].site : website[websiteAPI.indexOf(webName)]} </span>
+                                    ${data[key].in_24_hours = true ? `<span></span>` : `<span class="badge text-bg-danger">Ends in 24 hour </span>`}
+                                   
+                                </div >
+                            </div >
+                            <p class="card-text">${json[key].text}</p>
+                            <div class="d-grid gap-1">
+                                <a href="${data[key].url}" target="_blank">
+                                <button class="btn btn-block btn-primary">Join Contest</button>
+                                </a>
+                            </div>
+                            </div >
+                    <div class="d-flex justify-content-between card-footer text-muted">
+                        <div class="timeText ">
+                            Start Date:${formatedDate(data[key].start_time)}
+                        </div>
+                        <div class="timeText ">
+                            Duartion: ${toDay(data[key].duration)} Days 
+                        </div>
+                        <div class="timeText ">
+                            End Date: ${formatedDate(data[key].end_time)}
+                        </div>
+                    </div>
+                  </div > `;
+            }
+            cardBody.innerHTML = str;
+        }).catch(err => console.error(err));
+
+}
+
+function max_duration(webName) {
+    fetch(`https://kontests.net/api/v1/${webName}`)
+        .then(response => response.json())
+        .then(data => {
+
+            data.sort((a, b) => {
+                var start_date = new Date(a.duration);
+                var end_date = new Date(b.duration);
+                return end_date.getTime() - start_date.getTime();
+            });
+
+            console.log(data);
+
+            let str = "";
+            for (key in data) {
+                str += `<div class="card mb-3">
+                        <img src="https://source.unsplash.com/1000x400/?${category[randomCategory()]},${category[randomCategory()]}" class="card-img-top"
+                            alt="Image">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">${data[key].name}</h5>
+                                <div>
+                                    <span class="badge text-bg-success">${data[key].site != undefined ? data[key].site : website[websiteAPI.indexOf(webName)]} </span>
+                                    ${data[key].in_24_hours = true ? `<span></span>` : `<span class="badge text-bg-danger">Ends in 24 hour </span>`}
+                                   
+                                </div >
+                            </div >
+                            <p class="card-text">${json[key].text}</p>
+                            <div class="d-grid gap-1">
+                                <a href="${data[key].url}" target="_blank">
+                                <button class="btn btn-block btn-primary">Join Contest</button>
+                                </a>
+                            </div>
+                            </div >
+                    <div class="d-flex justify-content-between card-footer text-muted">
+                        <div class="timeText ">
+                            Start Date:${formatedDate(data[key].start_time)}
+                        </div>
+                        <div class="timeText ">
+                            Duartion: ${toDay(data[key].duration)} Days 
+                        </div>
+                        <div class="timeText ">
+                            End Date: ${formatedDate(data[key].end_time)}
+                        </div>
+                    </div>
+                  </div > `;
+            }
+            cardBody.innerHTML = str;
+        }).catch(err => console.error(err));
+
+}
+
+function hard_level(webName) {
+    fetch(`https://kontests.net/api/v1/${webName}`)
+        .then(response => response.json())
+        .then(data => {
             
             data.sort((a, b) => {
                 var start_date = new Date(b.duration);
@@ -101,14 +205,14 @@ function min_duration(webName) {
 
 }
 
-function max_duration(webName) {
+function easy_level(webName) {
     fetch(`https://kontests.net/api/v1/${webName}`)
         .then(response => response.json())
         .then(data => {
             
             data.sort((a, b) => {
-                var start_date = new Date(a.duration);
-                var end_date = new Date(b.duration);
+                var start_date = new Date(b.duration);
+                var end_date = new Date(a.duration);
                 return end_date.getTime() - start_date.getTime();
             });
 
@@ -152,23 +256,25 @@ function max_duration(webName) {
         }).catch(err => console.error(err));
 
 }
+
+
 
 function fetchAPI(webName) {
-    fetch(`https://kontests.net/api/v1/${webName}`)
-        .then(response => response.json())
-        .then(data => {
-            
-            data.sort((a, b) => {
-                var start_date = new Date(a.start_time);
-                var end_date = new Date(b.start_time);
-                return end_date.getTime() - start_date.getTime();
-            });
+                    fetch(`https://kontests.net/api/v1/${webName}`)
+                        .then(response => response.json())
+                        .then(data => {
 
-            console.log(data);
-           
-            let str = "";
-            for (key in data) {
-                str += `<div class="card mb-3">
+                            data.sort((a, b) => {
+                                var start_date = new Date(a.start_time);
+                                var end_date = new Date(b.start_time);
+                                return end_date.getTime() - start_date.getTime();
+                            });
+
+                            console.log(data);
+
+                            let str = "";
+                            for (key in data) {
+                                str += `<div class="card mb-3">
                         <img src="https://source.unsplash.com/1000x400/?${category[randomCategory()]},${category[randomCategory()]}" class="card-img-top"
                             alt="Image">
                         <div class="card-body">
@@ -199,7 +305,7 @@ function fetchAPI(webName) {
                         </div>
                     </div>
                   </div > `;
-            }
-            cardBody.innerHTML = str;
-        }).catch(err => console.error(err));
-}
+                            }
+                            cardBody.innerHTML = str;
+                        }).catch(err => console.error(err));
+                }
